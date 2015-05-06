@@ -1,0 +1,352 @@
+/*	--------------------------------------------------
+	:: Global Reset & Standards
+	-------------------------------------------------- */
+	
+	/* 
+		Eric Meyer's CSS Reset
+		http://meyerweb.com/eric/tools/css/reset/ 
+		v2.0 | 20110126
+   		License: none (public domain)
+	*/
+	
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	html {
+		font-size: 62.5%; 
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	sub {vertical-align: sub;}
+	sup {vertical-align: super;}
+	
+	body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; font-size: 1.3rem; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
+	
+
+
+/*	--------------------------------------------------
+	:: Links
+	-------------------------------------------------- */
+	a { color: #2a85e8; text-decoration: none; line-height: inherit; }
+	a:hover { color: #11639d; }
+	a:focus { color: #cc4714; outline: none; }
+	p a, p a:visited { line-height: inherit; }
+
+.hidden {
+  display:none !important;
+  visibility:hidden !important;
+}
+
+#pager {
+  display:none;
+}
+
+#cycle-loader {
+	height:32px;
+	left:50%;
+	margin:-8px 0 0 -8px;
+	position:absolute;
+	top:50%;
+	width:32px;
+	z-index:999;
+}
+
+#maximage {
+	display:none;
+	position:fixed !important;
+}
+
+#cycle-nav {
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+#cycle-nav ul {
+	list-style-type:none;
+}
+#cycle-nav ul li {
+	border:1px solid #ffffcc;
+	float:left;
+	margin:4px;
+}
+#cycle-nav ul li a {
+	background:#ffffcc;
+	float:left;
+	height:10px;
+	margin:2px;
+	width:10px;
+}
+#cycle-nav ul li.activeSlide {
+	border:1px solid #ff6600;
+}
+
+/*Set my gradient above all images*/
+#gradient {
+	left:0;
+	height:100%;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:999;
+}
+
+/*Set my logo in bottom left*/
+#logo {
+	bottom:30px;
+	height:auto;
+	left:30px;
+	position:absolute;
+	width:34%;
+	z-index:1000;
+}
+#logo img {
+	width:100%;
+}
+
+#arrow_left, #arrow_right {
+	bottom:30px;
+	height:67px;
+	position:absolute;
+	right:30px;
+	width:36px;
+	z-index:1000;
+}
+#arrow_left {
+	right:86px;
+}
+
+#arrow_left:hover, #arrow_right:hover {
+	bottom:29px;
+}
+#arrow_left:active, #arrow_right:active {
+	bottom:28px;
+}
+
+a {color:#666;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.in-slide-content { 
+	color:#333;
+	float:right;
+	font-family:'Helvetica Neue', helvetica;
+	font-size:60px;
+	font-weight:bold;
+	right:0;
+	margin:40px;
+	padding:20px;
+	position:absolute;
+	top:0;
+	width:700px;
+	z-index:9999; /* Show above .gradient */
+	text-shadow: 0 1px 0 #fff;
+}
+
+
+/* Categories */
+#categories {
+  position:absolute;
+  width:305px;
+  height:121px;
+  z-index:1000;
+  top:53px;
+  left:123px;
+  list-style-type:none;
+}
+  #categories li {
+    margin-bottom:11px;
+  }
+  #categories li a {
+    display:block;
+    background: url('../images/categories.png') no-repeat 0 0;
+    text-indent:-999em;
+  }
+  #categories li.home a {
+  	background-position:0 0;
+  	width:38px;
+  	height:11px;
+  }
+  #categories li.small a {
+  	background-position:0 -22px;
+  	width:38px;
+  	height:11px;
+  }
+  #categories li.medium {
+    margin-bottom:12px;
+  }
+  #categories li.medium a {
+  	background-position:0 -43px;
+  	width:55px;
+  	height:12px;
+  }
+  #categories li.nesters {
+    margin-bottom:12px;
+  }
+  #categories li.nesters a {
+  	background-position:0 -67px;
+  	width:51px;
+  	height:10px;
+  }
+  #categories li.quote {
+    margin-bottom:7px;
+  }
+  #categories li.quote a {
+  	background-position:0 -89px;
+  	width:38px;
+  	height:14px;
+  }
+  #categories li.contact {
+    
+  }
+  #categories li.contact a {
+  	background:none;
+  }
+    #categories li.contact a span.label {
+      display:inline-block;
+      background:url('../images/categories.png') no-repeat 0 -108px;
+    	width:50px;
+    	height:16px;
+    	float:left;
+    }
+      #categories li.contact a span.email {
+        display:inline-block;
+        width:255px;
+        height:16px;
+        background: url('../images/categories.png') no-repeat 0 -128px;
+        text-indent:-999em;
+        float:right;
+        display:none;
+      }
+      #categories li.contact a:hover span.email {
+        /*display:inline-block;*/
+      }
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-width : 480px){
+  body .mc-cycle {
+    top:0;
+  }
+  
+  #categories {
+    background:#f7f7f7;
+    top:0;
+    left:0;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:8px 0 0 56px;
+    line-height:1;
+    font-size:1.125em;
+  }
+    #categories li {
+      float:left;
+      margin:0 15px 0 0;
+    }
+      #categories li a {
+        background:none;
+        text-indent:0;
+        color:#333;
+      }
+        #categories li a:hover {
+          text-decoration:none;
+        }
+      #categories li.contact a.hires {
+        display:none;
+      }
+      #categories li.contact a.smallres {
+        display:block !important;
+        visibility:visible !important;
+      }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  #categories {
+    background:#f7f7f7;
+    top:0;
+    left:0;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:8px 0 0 8px;
+    line-height:1;
+    font-size:1em;
+  }
+    #categories li {
+      float:left;
+      margin:0 5px 0 0;
+    }
+    #categories li a {
+      background:none;
+      text-indent:0;
+      color:#333;
+    }
+      #categories li a:hover {
+        text-decoration:none;
+      }
+    #categories li.contact a.hires {
+      display:none;
+    }
+    #categories li.contact a.smallres {
+      display:block !important;
+      visibility:visible !important;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  
+}
+
+/* iPads (portrait) ----------- */
+@media only screen (min-device-width : 768px)  (max-device-width : 1024px)  (orientation : portrait) {
+  
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  
+}
